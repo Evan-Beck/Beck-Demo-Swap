@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS demoswaps_db;
+CREATE DATABASE demoswaps_db;

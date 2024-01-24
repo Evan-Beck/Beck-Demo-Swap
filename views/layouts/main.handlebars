@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Headers - 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/offers.css" />
+    <link rel="stylesheet" href="./css/trade.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <div class="site-header__start">
+          <img src="/assets/Demomonhead.png" id="demoicon">
+          <a href="#" class="brand">DemoSwap</a>
+        </div>
+        <div class="site-header__middle">
+          <nav class="nav">
+            <button class="nav__toggle" aria-expanded="false" type="button">
+              menu
+            </button>
+            <ul class="nav__wrapper">
+              <li class="nav__item"><a href="/#">Home</a></li>
+              <li class="nav__item"><a href="/trade">Create Trades</a></li>
+              <li class="nav__item"><a href="/offers">Current Offers</a></li>
+            </ul>
+          </nav>
+        </div>
+        {{#if logged_in}}
+        <div class="site-header__end">
+          <a href="/profile" class="signInLink">Profile</a>
+        </div>
+        {{/if}}
+
+        {{#unless logged_in}}
+        <div class="site-header__end">
+          <a href="/login" class="signInLink">Sign in</a>
+        </div>
+        {{/unless}}
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      {{{ body }}}
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/compiled/login.js"></script>
+    <script src="/js/compiled/logout.js"></script>
+    <script src="/js/compiled/profile.js"></script>
+    <script src="/js/update-trade.js"></script>
+  </body>
+</html>
